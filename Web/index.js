@@ -97,8 +97,6 @@ app.post('/genpin', pinLimiter, function(req, res) {
 });
 
 app.post('/setresults', setLimiter, function(req, res) {
-	console.log(req.body.pin)
-	console.log(req.body.results)
 	if(req.body.pin && req.body.results && shrunkDb.get(req.body.pin) == 'Waiting') {
 		shrunkDb.set(req.body.pin, req.body.results);
 		res.send('ok.');
