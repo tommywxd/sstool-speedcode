@@ -1,0 +1,10 @@
+D:\Documents\ShrunkieSS\Tool\Tool\obj\Debug\Tool.csprojAssemblyReference.cache
+D:\Documents\ShrunkieSS\Tool\Tool\obj\Debug\Tool.Form1.resources
+D:\Documents\ShrunkieSS\Tool\Tool\obj\Debug\Tool.Properties.Resources.resources
+D:\Documents\ShrunkieSS\Tool\Tool\obj\Debug\Tool.csproj.GenerateResource.cache
+D:\Documents\ShrunkieSS\Tool\Tool\bin\Debug\Tool.exe.config
+D:\Documents\ShrunkieSS\Tool\Tool\bin\Debug\Tool.exe
+D:\Documents\ShrunkieSS\Tool\Tool\bin\Debug\Tool.pdb
+D:\Documents\ShrunkieSS\Tool\Tool\obj\Debug\Tool.exe
+D:\Documents\ShrunkieSS\Tool\Tool\obj\Debug\Tool.pdb
+D:\Documents\ShrunkieSS\Tool\Tool\obj\Debug\Tool.Scan.resources

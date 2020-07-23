@@ -1,0 +1,172 @@
+<html lang="en"><head>
+<meta charset="UTF-8">
+<title>Panel</title>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+body {
+  background: #76b852; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  background: -o-linear-gradient(right, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+</style>
+</head>
+<body translate="no">
+<div class="login-page">
+<div class="form">
+<input id="pinform" readonly>
+<button onclick="genpin()">generate pin</button>
+<span style="animation: initial; transition: initial; color: initial; color-scheme: initial; font: initial; font-feature-settings: initial; font-kerning: initial; font-optical-sizing: initial; font-variation-settings: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; appearance: initial; backdrop-filter: initial; backface-visibility: initial; background: url(&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzLjUgNS4yODgxMUMxMy41IDUuMTkzNzYgMTMuNDA1NiA1LjA5OTQxIDEzLjI3MzUgNS4wNjE2NkwxMS42ODg1IDQuNDc2NjZDMTEuNDI0MyA0LjM2MzQxIDExLjEyMjQgNC40OTU1MSAxMS4xMjI0IDQuNjg0MjZWMTEuNTgxN0MxMS4xMjk4IDExLjYzNTUgMTEuMTUxMSAxMS42ODY0IDExLjE4NDIgMTEuNzI5NEMxMS4yMTczIDExLjc3MjQgMTEuMjYxMSAxMS44MDYxIDExLjMxMTEgMTEuODI3MUwxMi45MzQgMTIuNDEyMUMxMy4xNzkzIDEyLjUwNjQgMTMuNTAwMSAxMi4zNzQzIDEzLjUwMDEgMTIuMTY2N0wxMy41IDUuMjg4MTFaTTkuNDc5MzYgMTAuNTQzN0M5LjQ3OTM2IDEwLjQ0OTQgOS4zODUwMSAxMC4zNTUgOS4yNTI5MSAxMC4zMTczTDcuNjY3OTEgOS43MzIyNkM3LjQwMzc2IDkuNjE5MDEgNy4xMDE4MSA5Ljc1MTExIDcuMTAxODEgOS45Mzk4MVYxNC4yNDI0QzcuMTA5MjUgMTQuMjk2MSA3LjEzMDU2IDE0LjM0NyA3LjE2MzY1IDE0LjM5QzcuMTk2NzMgMTQuNDMzMSA3LjI0MDQ2IDE0LjQ2NjcgNy4yOTA1MSAxNC40ODc3TDguOTEzNDEgMTUuMDcyN0M5LjE1ODcxIDE1LjE2NzEgOS40Nzk1MSAxNS4wMzUgOS40Nzk1MSAxNC44Mjc0TDkuNDc5MzYgMTAuNTQzN1pNOS40NzkzNiAxLjc0OTc2QzkuNDc5MzYgMS42NTU0MSA5LjM4NTAxIDEuNTYxMDYgOS4yNTI5MSAxLjUyMzMxTDcuNjY3OTEgMC45MzgzMTFDNy40MDM3NiAwLjgyNTA2MSA3LjEwMTgxIDAuOTU3MTYxIDcuMTAxODEgMS4xNDU4NlY1LjQ0ODQxQzcuMTA5MjUgNS41MDIxNyA3LjEzMDU2IDUuNTUzMDcgNy4xNjM2NSA1LjU5NjA5QzcuMTk2NzMgNS42MzkxMiA3LjI0MDQ2IDUuNjcyNzggNy4yOTA1MSA1LjY5Mzc2TDguOTEzNDEgNi4yNzg3NkM5LjE1ODcxIDYuMzczMTEgOS40Nzk1MSA2LjI0MTAxIDkuNDc5NTEgNi4wMzM0MUw5LjQ3OTM2IDEuNzQ5NzZaTTUuNDc5MTEgMS40MTk3NkM1LjQ3OTExIDEuMzI1MzYgNS4zODQ3NiAxLjIzMTAxIDUuMjUyNjYgMS4xOTMzMUwzLjY2NzY2IDAuNjA4MzExQzMuNDAzNTEgMC40OTUwNjEgMy4xMDE1NiAwLjYyNzE2MSAzLjEwMTU2IDAuODE1ODYxVjE0LjU5MTRDMy4xMDg5OSAxNC42NDUyIDMuMTMwMyAxNC42OTYxIDMuMTYzMzkgMTQuNzM5MUMzLjE5NjQ4IDE0Ljc4MjEgMy4yNDAyMSAxNC44MTU3IDMuMjkwMjYgMTQuODM2N0w0LjkxMzE2IDE1LjQyMTdDNS4xNTg0NiAxNS41MTYxIDUuNDc5MjYgMTUuMzg0IDUuNDc5MjYgMTUuMTc2NEw1LjQ3OTExIDEuNDE5NzZaIiBmaWxsPSIjOTk5NTkyIi8+Cjwvc3ZnPgo=&quot;) center center / contain no-repeat; background-blend-mode: initial; baseline-shift: initial; block-size: initial; border-block-end: initial; border-block-start: initial; border: none; border-radius: initial; border-collapse: initial; border-inline-end: initial; border-inline-start: initial; bottom: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-size: initial; content: initial; counter-increment: initial; counter-reset: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: inline; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: 16px; hyphens: initial; image-orientation: initial; image-rendering: initial; inline-size: initial; isolation: initial; left: 296px; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block-end: initial; margin-block-start: initial; margin: initial; margin-inline-end: initial; margin-inline-start: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: 16px; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset: initial; opacity: 1; order: initial; origin-trial-test-property: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-wrap: initial; overflow: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block-end: initial; padding-block-start: initial; padding: initial; padding-inline-end: initial; padding-inline-start: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: absolute; quotes: initial; r: initial; resize: initial; right: initial; ruby-position: initial; rx: initial; ry: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-position: initial; top: 122.5px; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; user-select: initial; vector-effect: initial; vertical-align: initial; visibility: visible; -webkit-app-region: initial; border-spacing: initial; -webkit-border-image: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-font-size-delta: initial; -webkit-highlight: initial; -webkit-hyphenate-character: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-mask: initial; -webkit-mask-composite: initial; -webkit-perspective-origin-x: initial; -webkit-perspective-origin-y: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-emphasis: initial; -webkit-text-emphasis-position: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-transform-origin-x: initial; -webkit-transform-origin-y: initial; -webkit-transform-origin-z: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; white-space: initial; widows: initial; width: 16px; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: auto;"></span><span style="animation: initial; transition: initial; color: initial; color-scheme: initial; font: initial; font-feature-settings: initial; font-kerning: initial; font-optical-sizing: initial; font-variation-settings: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; appearance: initial; backdrop-filter: initial; backface-visibility: initial; background: url(&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzLjUgNS4yODgxMUMxMy41IDUuMTkzNzYgMTMuNDA1NiA1LjA5OTQxIDEzLjI3MzUgNS4wNjE2NkwxMS42ODg1IDQuNDc2NjZDMTEuNDI0MyA0LjM2MzQxIDExLjEyMjQgNC40OTU1MSAxMS4xMjI0IDQuNjg0MjZWMTEuNTgxN0MxMS4xMjk4IDExLjYzNTUgMTEuMTUxMSAxMS42ODY0IDExLjE4NDIgMTEuNzI5NEMxMS4yMTczIDExLjc3MjQgMTEuMjYxMSAxMS44MDYxIDExLjMxMTEgMTEuODI3MUwxMi45MzQgMTIuNDEyMUMxMy4xNzkzIDEyLjUwNjQgMTMuNTAwMSAxMi4zNzQzIDEzLjUwMDEgMTIuMTY2N0wxMy41IDUuMjg4MTFaTTkuNDc5MzYgMTAuNTQzN0M5LjQ3OTM2IDEwLjQ0OTQgOS4zODUwMSAxMC4zNTUgOS4yNTI5MSAxMC4zMTczTDcuNjY3OTEgOS43MzIyNkM3LjQwMzc2IDkuNjE5MDEgNy4xMDE4MSA5Ljc1MTExIDcuMTAxODEgOS45Mzk4MVYxNC4yNDI0QzcuMTA5MjUgMTQuMjk2MSA3LjEzMDU2IDE0LjM0NyA3LjE2MzY1IDE0LjM5QzcuMTk2NzMgMTQuNDMzMSA3LjI0MDQ2IDE0LjQ2NjcgNy4yOTA1MSAxNC40ODc3TDguOTEzNDEgMTUuMDcyN0M5LjE1ODcxIDE1LjE2NzEgOS40Nzk1MSAxNS4wMzUgOS40Nzk1MSAxNC44Mjc0TDkuNDc5MzYgMTAuNTQzN1pNOS40NzkzNiAxLjc0OTc2QzkuNDc5MzYgMS42NTU0MSA5LjM4NTAxIDEuNTYxMDYgOS4yNTI5MSAxLjUyMzMxTDcuNjY3OTEgMC45MzgzMTFDNy40MDM3NiAwLjgyNTA2MSA3LjEwMTgxIDAuOTU3MTYxIDcuMTAxODEgMS4xNDU4NlY1LjQ0ODQxQzcuMTA5MjUgNS41MDIxNyA3LjEzMDU2IDUuNTUzMDcgNy4xNjM2NSA1LjU5NjA5QzcuMTk2NzMgNS42MzkxMiA3LjI0MDQ2IDUuNjcyNzggNy4yOTA1MSA1LjY5Mzc2TDguOTEzNDEgNi4yNzg3NkM5LjE1ODcxIDYuMzczMTEgOS40Nzk1MSA2LjI0MTAxIDkuNDc5NTEgNi4wMzM0MUw5LjQ3OTM2IDEuNzQ5NzZaTTUuNDc5MTEgMS40MTk3NkM1LjQ3OTExIDEuMzI1MzYgNS4zODQ3NiAxLjIzMTAxIDUuMjUyNjYgMS4xOTMzMUwzLjY2NzY2IDAuNjA4MzExQzMuNDAzNTEgMC40OTUwNjEgMy4xMDE1NiAwLjYyNzE2MSAzLjEwMTU2IDAuODE1ODYxVjE0LjU5MTRDMy4xMDg5OSAxNC42NDUyIDMuMTMwMyAxNC42OTYxIDMuMTYzMzkgMTQuNzM5MUMzLjE5NjQ4IDE0Ljc4MjEgMy4yNDAyMSAxNC44MTU3IDMuMjkwMjYgMTQuODM2N0w0LjkxMzE2IDE1LjQyMTdDNS4xNTg0NiAxNS41MTYxIDUuNDc5MjYgMTUuMzg0IDUuNDc5MjYgMTUuMTc2NEw1LjQ3OTExIDEuNDE5NzZaIiBmaWxsPSIjOTk5NTkyIi8+Cjwvc3ZnPgo=&quot;) center center / contain no-repeat; background-blend-mode: initial; baseline-shift: initial; block-size: initial; border-block-end: initial; border-block-start: initial; border: none; border-radius: initial; border-collapse: initial; border-inline-end: initial; border-inline-start: initial; bottom: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-size: initial; content: initial; counter-increment: initial; counter-reset: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: inline; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: 16px; hyphens: initial; image-orientation: initial; image-rendering: initial; inline-size: initial; isolation: initial; left: 296px; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block-end: initial; margin-block-start: initial; margin: initial; margin-inline-end: initial; margin-inline-start: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: 16px; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset: initial; opacity: 1; order: initial; origin-trial-test-property: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-wrap: initial; overflow: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block-end: initial; padding-block-start: initial; padding: initial; padding-inline-end: initial; padding-inline-start: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: absolute; quotes: initial; r: initial; resize: initial; right: initial; ruby-position: initial; rx: initial; ry: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-position: initial; top: 60.5px; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; user-select: initial; vector-effect: initial; vertical-align: initial; visibility: visible; -webkit-app-region: initial; border-spacing: initial; -webkit-border-image: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-font-size-delta: initial; -webkit-highlight: initial; -webkit-hyphenate-character: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-mask: initial; -webkit-mask-composite: initial; -webkit-perspective-origin-x: initial; -webkit-perspective-origin-y: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-emphasis: initial; -webkit-text-emphasis-position: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-transform-origin-x: initial; -webkit-transform-origin-y: initial; -webkit-transform-origin-z: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; white-space: initial; widows: initial; width: 16px; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: auto;"></span></form>
+<p>
+<table>
+<tr>
+	<th>PIN</th>
+	<th>Result</th>
+</tr>
+<% database.forEach((value, key, map) => { %>
+<tr>
+<td><%= key %></td>
+<td><%= value %></td>
+</tr>
+<% }) %>
+</table>
+</div>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+$('.message a').click(function () {
+  $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+});
+</script>
+
+
+</body></html>
+
+
+<script>
+	function genpin() {
+		var xhr = new XMLHttpRequest();
+				var url = "/genpin";
+				xhr.open("POST", url, true);
+				xhr.setRequestHeader("Content-Type", "application/json");
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState === 4) {
+						document.getElementById("pinform").value = xhr.responseText;
+					}
+				};
+		xhr.send();
+	}
+</script>
