@@ -55,8 +55,6 @@ namespace Tool
                     json = "{\"pin\": " + _pin + ", \"results\": \"" + HttpUtility.JavaScriptStringEncode(String.Join(", ", cheats.ToArray())) + "\"}";
                 }
 
-                MessageBox.Show(json);
-
                 streamWriter.Write(json);
             }
 
