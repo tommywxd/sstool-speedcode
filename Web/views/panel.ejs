@@ -158,14 +158,14 @@ $('.message a').click(function () {
 <script>
 	function genpin() {
 		var xhr = new XMLHttpRequest();
-				var url = "/genpin";
-				xhr.open("POST", url, true);
-				xhr.setRequestHeader("Content-Type", "application/json");
-				xhr.onreadystatechange = function () {
-					if (xhr.readyState === 4) {
-						document.getElementById("pinform").value = xhr.responseText;
-					}
-				};
+		var url = "/genpin";
+		xhr.open("POST", url, true);
+		xhr.setRequestHeader("Content-Type", "application/json");
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState === 4) {
+				document.getElementById("pinform").value = xhr.responseText;
+			}
+		};
 		xhr.send();
 	}
 </script>
